@@ -15,20 +15,18 @@ public class Knowledge {
 		this.know = know;
 	}
 	
-	@SuppressWarnings("unused")
-	private void add(String key, String value) {
+	public void add(String key, String value) {
 		if(know.containsKey(key) == false) {
 			ArrayList<String> valuel = new ArrayList<String>();
+			valuel.add(value);
 			know.put(key,valuel);
-			
 		}
 		else {
 			know.get(key).add(value);
 		}
 	}
 	
-	@SuppressWarnings("unused")
-	private List<String> getEntry(String key) {
+	public List<String> getEntry(String key) {
 		return(know.get(key));		
 	}
 }

@@ -1,5 +1,7 @@
 package client;
 
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import iKnow.Knowledge;
@@ -25,12 +27,35 @@ public class Client {
 			    
 			    options,
 			    options[2]);
-			System.out.println(n);
 			if(n==1) { //Suchen
-				know.getEntry(String);
+				String key = (String)JOptionPane.showInputDialog("Geben sie das Thema ein: ");
+				List<String> value = know.getEntry(key);
+				String values = "";
+				if(value != null) {
+					for(int i = 0; i < value.size();i++) {
+						values+= value.get(i)+"\n";
+					}
+					JOptionPane.showMessageDialog(null, key+"\n"+values, "Thema: "+key,1);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Beitrag muss erstellt werden." , "Error",1);
+				}
 			}
 			else if(n==2) {//Beitrag erstellen
-				
+				String key = (String)JOptionPane.showInputDialog("Geben sie das Thema ein:");
+				if (key != null) {
+					String value = (String)JOptionPane.showInputDialog("Geben sie den Text dazu ein: ");
+					if (value != null) { 
+						know.add(key, value);
+						JOptionPane.showMessageDialog(null, "Beitrag wurde erstellt." , "Succes",1);
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "Beitrag konnte nicht ewrstellt werden." , "Error",1);
+					}
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Beitrag konnte nicht ewrstellt werden." , "Error",1);
+				}
 			}
 		}
 			
