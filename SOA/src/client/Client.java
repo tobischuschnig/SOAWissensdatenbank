@@ -29,13 +29,9 @@ public class Client {
 			    options[2]);
 			if(n==1) { //Suchen
 				String key = (String)JOptionPane.showInputDialog("Geben sie das Thema ein: ");
-				List<String> value = know.getEntry(key);
-				String values = "";
+				String value = know.getEntry(key);
 				if(value != null) {
-					for(int i = 0; i < value.size();i++) {
-						values+= value.get(i)+"\n";
-					}
-					JOptionPane.showMessageDialog(null, key+"\n"+values, "Thema: "+key,1);
+					JOptionPane.showMessageDialog(null, key+"\n\n"+value, "Thema: "+key,1);
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Beitrag muss erstellt werden." , "Error",1);
