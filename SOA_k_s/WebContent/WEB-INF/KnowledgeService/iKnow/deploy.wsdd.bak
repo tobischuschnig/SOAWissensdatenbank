@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from KnowledgeService WSDL service -->
+
+  <service name="Knowledge" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://iKnow"/>
+      <parameter name="wsdlServiceElement" value="KnowledgeService"/>
+      <parameter name="schemaQualified" value="http://iKnow"/>
+      <parameter name="wsdlServicePort" value="Knowledge"/>
+      <parameter name="className" value="iKnow.KnowledgeSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Knowledge"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="add" qname="operNS:add" xmlns:operNS="http://iKnow" returnQName="retNS:addReturn" xmlns:retNS="http://iKnow" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:key" xmlns:pns="http://iKnow" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:value" xmlns:pns="http://iKnow" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="load" qname="operNS:load" xmlns:operNS="http://iKnow" returnQName="retNS:loadReturn" xmlns:retNS="http://iKnow" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="save" qname="operNS:save" xmlns:operNS="http://iKnow" returnQName="retNS:saveReturn" xmlns:retNS="http://iKnow" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getEntry" qname="operNS:getEntry" xmlns:operNS="http://iKnow" returnQName="retNS:getEntryReturn" xmlns:retNS="http://iKnow" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:key" xmlns:pns="http://iKnow" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getEntry save load add"/>
+
+  </service>
+</deployment>

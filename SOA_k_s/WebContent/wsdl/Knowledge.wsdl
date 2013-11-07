@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://iKnow" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://iKnow" xmlns:intf="http://iKnow" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://iKnow" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="add">
+    <complexType>
+     <sequence>
+      <element name="key" type="xsd:string"/>
+      <element name="value" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addResponse">
+    <complexType>
+     <sequence>
+      <element name="addReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="load">
+    <complexType/>
+   </element>
+   <element name="loadResponse">
+    <complexType>
+     <sequence>
+      <element name="loadReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="save">
+    <complexType/>
+   </element>
+   <element name="saveResponse">
+    <complexType>
+     <sequence>
+      <element name="saveReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEntry">
+    <complexType>
+     <sequence>
+      <element name="key" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEntryResponse">
+    <complexType>
+     <sequence>
+      <element name="getEntryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getEntryResponse">
+
+      <wsdl:part element="impl:getEntryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveRequest">
+
+      <wsdl:part element="impl:save" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRequest">
+
+      <wsdl:part element="impl:add" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEntryRequest">
+
+      <wsdl:part element="impl:getEntry" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="saveResponse">
+
+      <wsdl:part element="impl:saveResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadRequest">
+
+      <wsdl:part element="impl:load" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadResponse">
+
+      <wsdl:part element="impl:loadResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addResponse">
+
+      <wsdl:part element="impl:addResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Knowledge">
+
+      <wsdl:operation name="add">
+
+         <wsdl:input message="impl:addRequest" name="addRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addResponse" name="addResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="load">
+
+         <wsdl:input message="impl:loadRequest" name="loadRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loadResponse" name="loadResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="save">
+
+         <wsdl:input message="impl:saveRequest" name="saveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:saveResponse" name="saveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntry">
+
+         <wsdl:input message="impl:getEntryRequest" name="getEntryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEntryResponse" name="getEntryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="KnowledgeSoapBinding" type="impl:Knowledge">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="add">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="load">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="save">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="KnowledgeService">
+
+      <wsdl:port binding="impl:KnowledgeSoapBinding" name="Knowledge">
+
+         <wsdlsoap:address location="http://localhost:8080/SOA_k_s/services/Knowledge"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
