@@ -1,7 +1,5 @@
 package client;
 
-import java.util.List;
-
 import javax.swing.JOptionPane;
 
 import iKnow.Knowledge;
