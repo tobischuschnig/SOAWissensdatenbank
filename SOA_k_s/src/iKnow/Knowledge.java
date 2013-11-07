@@ -31,7 +31,9 @@ public class Knowledge {
 			know.put(key, hilf);
 		}
 		boolean bool = save();
+		
 		return bool;
+//		return true;
 	}
 	
 	public String getEntry(String key) {
@@ -56,6 +58,7 @@ public class Knowledge {
 			return false;
 		}
 	}
+	
 	public boolean load() {
 		Properties properties = new Properties();
 		FileReader reader;
