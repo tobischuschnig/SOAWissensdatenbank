@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
 
 import org.apache.axis2.AxisFault;
 
-import iKnow.Knowledge;
 import iknowsoa.KnowledgeServiceStub;
 import iknowsoa.KnowledgeServiceStub.*; 
 
@@ -19,9 +18,7 @@ public class Client {
 	public static void main(String[] args) throws RemoteException{
 		
 			KnowledgeServiceStub stub = new KnowledgeServiceStub();
-		
-		Knowledge know = new Knowledge();
-		int n = 2; 
+			int n = 2; 
 		while(n != -1 && n != 0) {
 			Object[] options = {"Schliessen",
 			                    "Suchen",
