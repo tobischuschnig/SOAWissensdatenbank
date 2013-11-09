@@ -1,0 +1,564 @@
+commit d386c7eb7878a38ffa179d6fb9c727cda5f24978
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Sat Nov 9 12:26:14 2013 +0100
+
+    fast fertig mit protokoll JavaDoc
+
+ Aufgabe_02_Klune_Schuschnig.docx                   | Bin 454523 -> 745417 bytes
+ Klassendiagramm.asta                               | Bin 0 -> 56762 bytes
+ Klassendiagramm.asta.lock                          |   0
+ Klassendiagramm.png                                | Bin 0 -> 290417 bytes
+ doc/allclasses-frame.html                          |  40 ++
+ doc/allclasses-noframe.html                        |  40 ++
+ doc/client/Client.html                             | 266 ++++++++++
+ doc/client/class-use/Client.html                   | 115 +++++
+ doc/client/package-frame.html                      |  19 +
+ doc/client/package-summary.html                    | 135 +++++
+ doc/client/package-tree.html                       | 128 +++++
+ doc/client/package-use.html                        | 115 +++++
+ doc/constant-values.html                           | 115 +++++
+ doc/deprecated-list.html                           | 115 +++++
+ doc/help-doc.html                                  | 220 ++++++++
+ doc/iKnow/Knowledge.html                           | 340 +++++++++++++
+ doc/iKnow/class-use/Knowledge.html                 | 115 +++++
+ doc/iKnow/package-frame.html                       |  19 +
+ doc/iKnow/package-summary.html                     | 136 +++++
+ doc/iKnow/package-tree.html                        | 128 +++++
+ doc/iKnow/package-use.html                         | 115 +++++
+ doc/iknowsoa/KnowledgeServiceCallbackHandler.html  | 427 ++++++++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.Add.Factory.html | 275 ++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.Add.html         | 471 +++++++++++++++++
+ .../KnowledgeServiceStub.AddResponse.Factory.html  | 275 ++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.AddResponse.html | 437 ++++++++++++++++
+ .../KnowledgeServiceStub.ExtensionMapper.html      | 267 ++++++++++
+ .../KnowledgeServiceStub.GetEntry.Factory.html     | 275 ++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.GetEntry.html    | 437 ++++++++++++++++
+ ...wledgeServiceStub.GetEntryResponse.Factory.html | 275 ++++++++++
+ .../KnowledgeServiceStub.GetEntryResponse.html     | 437 ++++++++++++++++
+ .../KnowledgeServiceStub.Load.Factory.html         | 275 ++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.Load.html        | 403 +++++++++++++++
+ .../KnowledgeServiceStub.LoadResponse.Factory.html | 275 ++++++++++
+ .../KnowledgeServiceStub.LoadResponse.html         | 437 ++++++++++++++++
+ .../KnowledgeServiceStub.Save.Factory.html         | 275 ++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.Save.html        | 403 +++++++++++++++
+ .../KnowledgeServiceStub.SaveResponse.Factory.html | 275 ++++++++++
+ .../KnowledgeServiceStub.SaveResponse.html         | 437 ++++++++++++++++
+ doc/iknowsoa/KnowledgeServiceStub.html             | 558 +++++++++++++++++++++
+ .../class-use/KnowledgeServiceCallbackHandler.html | 179 +++++++
+ .../KnowledgeServiceStub.Add.Factory.html          | 115 +++++
+ .../class-use/KnowledgeServiceStub.Add.html        | 183 +++++++
+ .../KnowledgeServiceStub.AddResponse.Factory.html  | 115 +++++
+ .../KnowledgeServiceStub.AddResponse.html          | 183 +++++++
+ .../KnowledgeServiceStub.ExtensionMapper.html      | 115 +++++
+ .../KnowledgeServiceStub.GetEntry.Factory.html     | 115 +++++
+ .../class-use/KnowledgeServiceStub.GetEntry.html   | 183 +++++++
+ ...wledgeServiceStub.GetEntryResponse.Factory.html | 115 +++++
+ .../KnowledgeServiceStub.GetEntryResponse.html     | 183 +++++++
+ .../KnowledgeServiceStub.Load.Factory.html         | 115 +++++
+ .../class-use/KnowledgeServiceStub.Load.html       | 183 +++++++
+ .../KnowledgeServiceStub.LoadResponse.Factory.html | 115 +++++
+ .../KnowledgeServiceStub.LoadResponse.html         | 183 +++++++
+ .../KnowledgeServiceStub.Save.Factory.html         | 115 +++++
+ .../class-use/KnowledgeServiceStub.Save.html       | 183 +++++++
+ .../KnowledgeServiceStub.SaveResponse.Factory.html | 115 +++++
+ .../KnowledgeServiceStub.SaveResponse.html         | 183 +++++++
+ doc/iknowsoa/class-use/KnowledgeServiceStub.html   | 115 +++++
+ doc/iknowsoa/package-frame.html                    |  37 ++
+ doc/iknowsoa/package-summary.html                  | 224 +++++++++
+ doc/iknowsoa/package-tree.html                     | 150 ++++++
+ doc/iknowsoa/package-use.html                      | 175 +++++++
+ doc/index-files/index-1.html                       | 126 +++++
+ doc/index-files/index-10.html                      | 206 ++++++++
+ doc/index-files/index-11.html                      | 120 +++++
+ doc/index-files/index-2.html                       | 130 +++++
+ doc/index-files/index-3.html                       | 208 ++++++++
+ doc/index-files/index-4.html                       | 122 +++++
+ doc/index-files/index-5.html                       | 261 ++++++++++
+ doc/index-files/index-6.html                       | 126 +++++
+ doc/index-files/index-7.html                       | 136 +++++
+ doc/index-files/index-8.html                       | 182 +++++++
+ doc/index-files/index-9.html                       | 158 ++++++
+ doc/index.html                                     |  33 ++
+ doc/overview-frame.html                            |  23 +
+ doc/overview-summary.html                          | 138 +++++
+ doc/overview-tree.html                             | 157 ++++++
+ doc/package-list                                   |   4 +
+ doc/resources/background.gif                       | Bin 0 -> 2313 bytes
+ doc/resources/tab.gif                              | Bin 0 -> 291 bytes
+ doc/resources/titlebar.gif                         | Bin 0 -> 10701 bytes
+ doc/resources/titlebar_end.gif                     | Bin 0 -> 849 bytes
+ doc/serialized-form.html                           | 252 ++++++++++
+ doc/stylesheet.css                                 | 474 +++++++++++++++++
+ doc/unitest/ClientTest.html                        | 228 +++++++++
+ doc/unitest/KnowledgeTest.html                     | 279 +++++++++++
+ doc/unitest/class-use/ClientTest.html              | 115 +++++
+ doc/unitest/class-use/KnowledgeTest.html           | 115 +++++
+ doc/unitest/package-frame.html                     |  20 +
+ doc/unitest/package-summary.html                   | 137 +++++
+ doc/unitest/package-tree.html                      | 129 +++++
+ doc/unitest/package-use.html                       | 115 +++++
+ ~$fgabe02_SOA_Klune_Schuschnig.docx                | Bin 162 -> 0 bytes
+ ~$fgabe_02_Klune_Schuschnig.docx                   | Bin 162 -> 0 bytes
+ ~WRL3469.tmp                                       | Bin 63109 -> 0 bytes
+ 96 files changed, 16448 insertions(+)
+
+commit 7bdcde8e70b6418754a51cd32e33a54d9fb91d3c
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Sat Nov 9 11:31:30 2013 +0100
+
+    Protokoll arbeiten
+
+ Aufgabe_02_Klune_Schuschnig.docx                      | Bin 0 -> 454523 bytes
+ .../WEB-INF/services/Knowledge/client/Client.class    | Bin 2016 -> 2805 bytes
+ .../WEB-INF/services/Knowledge/iKnow/Knowledge.class  | Bin 3190 -> 3190 bytes
+ .../iknowsoa/KnowledgeServiceCallbackHandler.class    | Bin 0 -> 2113 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub$1.class   | Bin 0 -> 5715 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub$2.class   | Bin 0 -> 5755 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub$3.class   | Bin 0 -> 5715 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub$4.class   | Bin 0 -> 5705 bytes
+ .../iknowsoa/KnowledgeServiceStub$Add$Factory.class   | Bin 0 -> 3616 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub$Add.class | Bin 0 -> 7751 bytes
+ .../KnowledgeServiceStub$AddResponse$Factory.class    | Bin 0 -> 3434 bytes
+ .../iknowsoa/KnowledgeServiceStub$AddResponse.class   | Bin 0 -> 7391 bytes
+ .../KnowledgeServiceStub$ExtensionMapper.class        | Bin 0 -> 1034 bytes
+ .../KnowledgeServiceStub$GetEntry$Factory.class       | Bin 0 -> 3363 bytes
+ .../iknowsoa/KnowledgeServiceStub$GetEntry.class      | Bin 0 -> 7408 bytes
+ ...nowledgeServiceStub$GetEntryResponse$Factory.class | Bin 0 -> 3452 bytes
+ .../KnowledgeServiceStub$GetEntryResponse.class       | Bin 0 -> 7511 bytes
+ .../iknowsoa/KnowledgeServiceStub$Load$Factory.class  | Bin 0 -> 2387 bytes
+ .../iknowsoa/KnowledgeServiceStub$Load.class          | Bin 0 -> 6950 bytes
+ .../KnowledgeServiceStub$LoadResponse$Factory.class   | Bin 0 -> 3444 bytes
+ .../iknowsoa/KnowledgeServiceStub$LoadResponse.class  | Bin 0 -> 7401 bytes
+ .../iknowsoa/KnowledgeServiceStub$Save$Factory.class  | Bin 0 -> 2387 bytes
+ .../iknowsoa/KnowledgeServiceStub$Save.class          | Bin 0 -> 6950 bytes
+ .../KnowledgeServiceStub$SaveResponse$Factory.class   | Bin 0 -> 3444 bytes
+ .../iknowsoa/KnowledgeServiceStub$SaveResponse.class  | Bin 0 -> 7401 bytes
+ .../Knowledge/iknowsoa/KnowledgeServiceStub.class     | Bin 0 -> 24321 bytes
+ .../services/Knowledge/unitest/ClientTest.class       | Bin 0 -> 271 bytes
+ .../services/Knowledge/unitest/KnowledgeTest.class    | Bin 0 -> 1098 bytes
+ ~$fgabe02_SOA_Klune_Schuschnig.docx                   | Bin 0 -> 162 bytes
+ ~$fgabe_02_Klune_Schuschnig.docx                      | Bin 0 -> 162 bytes
+ ~WRL3469.tmp                                          | Bin 0 -> 63109 bytes
+ 31 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6206492390d8a01993c49b960e6124647e1dada5
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Sat Nov 9 09:40:36 2013 +0100
+
+    Protokoll 2
+
+ SOA_k_s/.classpath                     |  7 ++----
+ SOA_k_s/src/unitest/ClientTest.java    | 32 +++++++++++++++++++++++++++
+ SOA_k_s/src/unitest/KnowledgeTest.java | 40 ++++++++++++++++++++++++++++++++++
+ 3 files changed, 74 insertions(+), 5 deletions(-)
+
+commit 242c4a37bef680cbec9d8ddabf87b92de89dc4ec
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Sat Nov 9 09:03:11 2013 +0100
+
+    Protokoll
+
+ Aufgabe02_SOA_Klune_Schuschnig.docx | Bin 0 -> 98218 bytes
+ SOA_k_s/src/client/Client.java      |   5 +++++
+ SOA_k_s/src/iKnow/Knowledge.java    |  33 +++++++++++++++++++++++++++++++++
+ 3 files changed, 38 insertions(+)
+
+commit ad7e84d14f679c1b89f4095ac3df1f5e3e66bc99
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Fri Nov 8 17:35:14 2013 +0100
+
+    Datenabgleich
+
+ SOA/.project     | 17 +++++++++++++++++
+ SOA/bin/.project | 17 +++++++++++++++++
+ 2 files changed, 34 insertions(+)
+
+commit 58443475cd504e94fc62e18544eddb172048001b
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Fri Nov 8 15:50:31 2013 +0100
+
+    ueberarbeitet
+
+ SOA_k_s/src/client/Client.java | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+commit ab83bc76bd02bb946933546ad1bd621a14fed668
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 20:24:35 2013 +0100
+
+    fertigstellung der kommunikation
+
+ SOA_k_s/conf.properties                            |    2 +
+ SOA_k_s/src/client/Client.java                     |   34 +-
+ SOA_k_s/src/iKnow/Knowledge.java                   |    3 +
+ .../iknowsoa/KnowledgeServiceCallbackHandler.java  |  114 +
+ SOA_k_s/src/iknowsoa/KnowledgeServiceStub.java     | 4924 ++++++++++++++++++++
+ 5 files changed, 5069 insertions(+), 8 deletions(-)
+
+commit dbb0f2b17597b908eff7aa1e94fdef263f06498f
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 17:57:12 2013 +0100
+
+    loeschen des alten projects
+
+ .classpath                                         | 17 -----
+ .gitignore                                         |  1 -
+ .project                                           | 36 -----------
+ .settings/.jsdtscope                               | 12 ----
+ .settings/org.eclipse.jdt.core.prefs               |  7 --
+ .settings/org.eclipse.wst.common.component         |  8 ---
+ .../org.eclipse.wst.common.project.facet.core.xml  | 10 ---
+ .../org.eclipse.wst.jsdt.ui.superType.container    |  1 -
+ .settings/org.eclipse.wst.jsdt.ui.superType.name   |  1 -
+ WebContent/META-INF/MANIFEST.MF                    |  3 -
+ src/client/Client.java                             | 58 -----------------
+ src/iKnow/Knowledge.java                           | 74 ----------------------
+ 12 files changed, 228 deletions(-)
+
+commit 380dbc55fc6bc9a093f98cf4cf8b035e9969ae69
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 15:52:20 2013 +0100
+
+    erstellen des .wsdl server files
+
+ .../org.eclipse.wst.common.project.facet.core.xml  |   2 +
+ SOA_k_s/.settings/org.eclipse.wst.validation.prefs |   2 +
+ .../WEB-INF/KnowledgeService/iKnow/deploy.wsdd     |  27 ++
+ .../WEB-INF/KnowledgeService/iKnow/deploy.wsdd.bak |  37 ++
+ .../WEB-INF/KnowledgeService/iKnow/undeploy.wsdd   |  15 +
+ .../WebContent/WEB-INF/classes/META-INF/LICENSE    | 203 ++++++++
+ SOA_k_s/WebContent/WEB-INF/classes/META-INF/NOTICE |  26 +
+ .../WEB-INF/classes/commons-logging.properties     |  30 ++
+ .../WebContent/WEB-INF/classes/log4j.properties    |  40 ++
+ .../axis2/transport/http/AxisAdminServlet.class    | Bin 0 -> 1196 bytes
+ .../org/apache/axis2/webapp/AdminAgent.class       | Bin 0 -> 18933 bytes
+ .../org/apache/axis2/webapp/AxisAdminServlet.class | Bin 0 -> 2419 bytes
+ SOA_k_s/WebContent/WEB-INF/conf/axis2.policy       |  10 +
+ SOA_k_s/WebContent/WEB-INF/conf/axis2.xml          | 528 +++++++++++++++++++++
+ .../WEB-INF/conf/commons-logging.properties        |  30 ++
+ SOA_k_s/WebContent/WEB-INF/conf/log4j.properties   |  40 ++
+ SOA_k_s/WebContent/WEB-INF/lib/XmlSchema-1.4.7.jar | Bin 0 -> 148829 bytes
+ .../WebContent/WEB-INF/lib/XmlSchema-LICENSE.txt   | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/activation-1.1.jar  | Bin 0 -> 62983 bytes
+ .../WebContent/WEB-INF/lib/activation-LICENSE.txt  | 119 +++++
+ SOA_k_s/WebContent/WEB-INF/lib/antlr-2-LICENSE.txt |  31 ++
+ SOA_k_s/WebContent/WEB-INF/lib/antlr-2.7.7.jar     | Bin 0 -> 445288 bytes
+ .../WebContent/WEB-INF/lib/axiom-api-1.2.13.jar    | Bin 0 -> 420860 bytes
+ .../WebContent/WEB-INF/lib/axiom-api-LICENSE.txt   | 202 ++++++++
+ .../WebContent/WEB-INF/lib/axiom-dom-1.2.13.jar    | Bin 0 -> 201829 bytes
+ .../WebContent/WEB-INF/lib/axiom-dom-LICENSE.txt   | 202 ++++++++
+ .../WebContent/WEB-INF/lib/axiom-impl-1.2.13.jar   | Bin 0 -> 158091 bytes
+ .../WebContent/WEB-INF/lib/axiom-impl-LICENSE.txt  | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/axis.jar            | Bin 0 -> 1599570 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/axis2-LICENSE.txt   | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/axis2-adb-1.6.2.jar | Bin 0 -> 688884 bytes
+ .../WEB-INF/lib/axis2-adb-codegen-1.6.2.jar        | Bin 0 -> 180677 bytes
+ .../WEB-INF/lib/axis2-ant-plugin-1.6.2.jar         | Bin 0 -> 18284 bytes
+ .../WEB-INF/lib/axis2-clustering-1.6.2.jar         | Bin 0 -> 107281 bytes
+ .../WebContent/WEB-INF/lib/axis2-codegen-1.6.2.jar | Bin 0 -> 254405 bytes
+ .../WebContent/WEB-INF/lib/axis2-corba-1.6.2.jar   | Bin 0 -> 147181 bytes
+ .../WEB-INF/lib/axis2-fastinfoset-1.6.2.jar        | Bin 0 -> 16437 bytes
+ .../WEB-INF/lib/axis2-java2wsdl-1.6.2.jar          | Bin 0 -> 27749 bytes
+ .../WebContent/WEB-INF/lib/axis2-jaxbri-1.6.2.jar  | Bin 0 -> 28700 bytes
+ .../WebContent/WEB-INF/lib/axis2-jaxws-1.6.2.jar   | Bin 0 -> 743899 bytes
+ .../WebContent/WEB-INF/lib/axis2-jibx-1.6.2.jar    | Bin 0 -> 35742 bytes
+ .../WebContent/WEB-INF/lib/axis2-json-1.6.2.jar    | Bin 0 -> 19191 bytes
+ .../WebContent/WEB-INF/lib/axis2-kernel-1.6.2.jar  | Bin 0 -> 1045467 bytes
+ .../WEB-INF/lib/axis2-metadata-1.6.2.jar           | Bin 0 -> 432494 bytes
+ .../WEB-INF/lib/axis2-mtompolicy-1.6.2.jar         | Bin 0 -> 13946 bytes
+ .../WebContent/WEB-INF/lib/axis2-saaj-1.6.2.jar    | Bin 0 -> 90445 bytes
+ .../lib/axis2-soapmonitor-servlet-1.6.2.jar        | Bin 0 -> 33756 bytes
+ .../WebContent/WEB-INF/lib/axis2-spring-1.6.2.jar  | Bin 0 -> 11466 bytes
+ .../WEB-INF/lib/axis2-transport-http-1.6.2.jar     | Bin 0 -> 152926 bytes
+ .../WEB-INF/lib/axis2-transport-local-1.6.2.jar    | Bin 0 -> 16117 bytes
+ .../WEB-INF/lib/axis2-xmlbeans-1.6.2.jar           | Bin 0 -> 27446 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/commons-cli-1.2.jar | Bin 0 -> 41123 bytes
+ .../WebContent/WEB-INF/lib/commons-cli-LICENSE.txt | 202 ++++++++
+ .../WebContent/WEB-INF/lib/commons-codec-1.3.jar   | Bin 0 -> 46725 bytes
+ .../WEB-INF/lib/commons-codec-LICENSE.txt          | 202 ++++++++
+ .../WEB-INF/lib/commons-discovery-0.2.jar          | Bin 0 -> 71442 bytes
+ .../WEB-INF/lib/commons-fileupload-1.2.jar         | Bin 0 -> 53082 bytes
+ .../WEB-INF/lib/commons-fileupload-LICENSE.txt     | 202 ++++++++
+ .../WEB-INF/lib/commons-httpclient-3.1.jar         | Bin 0 -> 305001 bytes
+ .../WEB-INF/lib/commons-httpclient-LICENSE.txt     | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/commons-io-1.4.jar  | Bin 0 -> 109043 bytes
+ .../WebContent/WEB-INF/lib/commons-io-LICENSE.txt  | 203 ++++++++
+ .../WEB-INF/lib/commons-logging-1.1.1.jar          | Bin 0 -> 60686 bytes
+ .../WEB-INF/lib/commons-logging-LICENSE.txt        | 203 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/commons-logging.jar | Bin 0 -> 68107 bytes
+ .../lib/geronimo-stax-api_1.0_spec-1.0.1.jar       | Bin 0 -> 28804 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/httpcore-4.0.jar    | Bin 0 -> 172914 bytes
+ .../WebContent/WEB-INF/lib/httpcore-LICENSE.txt    | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/jaxrpc.jar          | Bin 0 -> 31191 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/log4j-1.2.15.jar    | Bin 0 -> 391834 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/log4j-LICENSE.txt   | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/mail-1.4.jar        | Bin 0 -> 388864 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/mail-LICENSE.txt    | 119 +++++
+ SOA_k_s/WebContent/WEB-INF/lib/neethi-3.0.2.jar    | Bin 0 -> 71320 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/neethi-LICENSE.txt  | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/saaj.jar            | Bin 0 -> 18979 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/woden-api-1.0M9.jar | Bin 0 -> 150102 bytes
+ .../WebContent/WEB-INF/lib/woden-api-LICENSE.txt   | 202 ++++++++
+ .../WEB-INF/lib/woden-impl-commons-1.0M9.jar       | Bin 0 -> 186268 bytes
+ .../WEB-INF/lib/woden-impl-commons-LICENSE.txt     | 202 ++++++++
+ .../WEB-INF/lib/woden-impl-dom-1.0M9.jar           | Bin 0 -> 48704 bytes
+ .../WEB-INF/lib/woden-impl-dom-LICENSE.txt         | 202 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/wsdl4j-1.6.2.jar    | Bin 0 -> 148429 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/wsdl4j-LICENSE.txt  |  88 ++++
+ SOA_k_s/WebContent/WEB-INF/lib/wsdl4j.jar          | Bin 0 -> 168203 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/wstx-LICENSE.txt    | 203 ++++++++
+ SOA_k_s/WebContent/WEB-INF/lib/wstx-asl-3.2.9.jar  | Bin 0 -> 524224 bytes
+ SOA_k_s/WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar  | Bin 0 -> 2666695 bytes
+ .../WebContent/WEB-INF/lib/xmlbeans-LICENSE.txt    | 202 ++++++++
+ .../WEB-INF/modules/addressing-1.6.2.mar           | Bin 0 -> 30401 bytes
+ SOA_k_s/WebContent/WEB-INF/modules/mex-1.6.2.mar   | Bin 0 -> 33948 bytes
+ SOA_k_s/WebContent/WEB-INF/modules/modules.list    |   6 +
+ .../WEB-INF/modules/mtompolicy-1.6.2.mar           | Bin 0 -> 14011 bytes
+ SOA_k_s/WebContent/WEB-INF/modules/ping-1.6.2.mar  | Bin 0 -> 12975 bytes
+ .../WebContent/WEB-INF/modules/scripting-1.6.2.mar | Bin 0 -> 29279 bytes
+ .../WEB-INF/modules/soapmonitor-1.6.2.mar          | Bin 0 -> 10975 bytes
+ SOA_k_s/WebContent/WEB-INF/server-config.wsdd      |  71 +++
+ .../services/Knowledge/META-INF/services.xml       |  10 +
+ .../WEB-INF/services/Knowledge/client/Client.class | Bin 0 -> 2016 bytes
+ .../services/Knowledge/iKnow/Knowledge.class       | Bin 0 -> 3190 bytes
+ SOA_k_s/WebContent/WEB-INF/services/services.list  |   1 +
+ SOA_k_s/WebContent/WEB-INF/services/version.aar    | Bin 0 -> 8539 bytes
+ SOA_k_s/WebContent/WEB-INF/web.xml                 |  38 ++
+ SOA_k_s/WebContent/axis2-web/ActivateService.jsp   |  82 ++++
+ .../WebContent/axis2-web/EngageToServiceGroup.jsp  | 138 ++++++
+ SOA_k_s/WebContent/axis2-web/Error/AuthError.html  |  44 ++
+ SOA_k_s/WebContent/axis2-web/Error/GenError.html   |  44 ++
+ SOA_k_s/WebContent/axis2-web/Error/error404.jsp    |  63 +++
+ SOA_k_s/WebContent/axis2-web/Error/error500.jsp    |  64 +++
+ SOA_k_s/WebContent/axis2-web/HappyAxis.jsp         | 508 ++++++++++++++++++++
+ SOA_k_s/WebContent/axis2-web/InActivateService.jsp |  83 ++++
+ SOA_k_s/WebContent/axis2-web/LeftFrame.jsp         | 204 ++++++++
+ SOA_k_s/WebContent/axis2-web/ListServiceGroup.jsp  |  67 +++
+ SOA_k_s/WebContent/axis2-web/Login.jsp             |  90 ++++
+ SOA_k_s/WebContent/axis2-web/MainFrame.jsp         |  29 ++
+ SOA_k_s/WebContent/axis2-web/SelectService.jsp     |  79 +++
+ SOA_k_s/WebContent/axis2-web/ServiceParaEdit.jsp   | 122 +++++
+ SOA_k_s/WebContent/axis2-web/TopFrame.jsp          |  30 ++
+ SOA_k_s/WebContent/axis2-web/ViewContexts.jsp      |  64 +++
+ .../WebContent/axis2-web/ViewGlobalHandlers.jsp    | 137 ++++++
+ .../WebContent/axis2-web/ViewServiceHandlers.jsp   | 147 ++++++
+ SOA_k_s/WebContent/axis2-web/admin.jsp             |  31 ++
+ SOA_k_s/WebContent/axis2-web/css/axis-style.css    |  50 ++
+ SOA_k_s/WebContent/axis2-web/deleteService.jsp     |  23 +
+ SOA_k_s/WebContent/axis2-web/disengage.jsp         |  22 +
+ SOA_k_s/WebContent/axis2-web/engagingglobally.jsp  |  72 +++
+ .../WebContent/axis2-web/engagingtoanoperation.jsp | 126 +++++
+ .../WebContent/axis2-web/engagingtoaservice.jsp    | 144 ++++++
+ SOA_k_s/WebContent/axis2-web/error.jsp             |  31 ++
+ SOA_k_s/WebContent/axis2-web/errorModule.jsp       |  30 ++
+ SOA_k_s/WebContent/axis2-web/globalModules.jsp     |  55 +++
+ SOA_k_s/WebContent/axis2-web/images/asf-logo.gif   | Bin 0 -> 5866 bytes
+ SOA_k_s/WebContent/axis2-web/images/axis.gif       | Bin 0 -> 2494 bytes
+ SOA_k_s/WebContent/axis2-web/images/axis.jpg       | Bin 0 -> 3355 bytes
+ SOA_k_s/WebContent/axis2-web/images/axis_l.jpg     | Bin 0 -> 12340 bytes
+ .../WebContent/axis2-web/include/adminfooter.inc   |  23 +
+ .../WebContent/axis2-web/include/adminheader.inc   |  28 ++
+ .../WebContent/axis2-web/include/adminheader.jsp   |  81 ++++
+ SOA_k_s/WebContent/axis2-web/include/footer.inc    |  37 ++
+ SOA_k_s/WebContent/axis2-web/include/header.inc    |  29 ++
+ SOA_k_s/WebContent/axis2-web/include/httpbase.jsp  |  71 +++
+ .../WebContent/axis2-web/include/link-footer.inc   |  23 +
+ .../WebContent/axis2-web/include/link-footer.jsp   |  69 +++
+ SOA_k_s/WebContent/axis2-web/index.jsp             |  58 +++
+ SOA_k_s/WebContent/axis2-web/listFaultyService.jsp |  85 ++++
+ SOA_k_s/WebContent/axis2-web/listGroupService.jsp  | 104 ++++
+ SOA_k_s/WebContent/axis2-web/listModules.jsp       |  81 ++++
+ SOA_k_s/WebContent/axis2-web/listService.jsp       | 158 ++++++
+ SOA_k_s/WebContent/axis2-web/listServices.jsp      | 131 +++++
+ SOA_k_s/WebContent/axis2-web/listSingleService.jsp | 103 ++++
+ SOA_k_s/WebContent/axis2-web/upload.jsp            |  69 +++
+ .../WebContent/axis2-web/viewServiceContext.jsp    |  50 ++
+ .../axis2-web/viewServiceGroupContext.jsp          |  55 +++
+ SOA_k_s/WebContent/axis2-web/viewphases.jsp        | 111 +++++
+ SOA_k_s/WebContent/wsdl/Knowledge.wsdl             | 263 ++++++++++
+ SOA_k_s/build.xml                                  | 109 +++++
+ 156 files changed, 9631 insertions(+)
+
+commit 131bb3dd0547bc41d60e8d874a13787954241fdd
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 11:31:59 2013 +0100
+
+    noetig fuer eclipse
+
+ SOA_k_s/src/client/Client.java       | 58 ++++++++++++++++++++++++++++
+ SOA_k_s/src/iKnow/Knowledge.java     | 74 ++++++++++++++++++++++++++++++++++++
+ SOA_k_s/src/src/client/Client.java   | 58 ----------------------------
+ SOA_k_s/src/src/iKnow/Knowledge.java | 74 ------------------------------------
+ 4 files changed, 132 insertions(+), 132 deletions(-)
+
+commit 84d977c81e96896da930534b590e92c4406ce89f
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 11:27:56 2013 +0100
+
+    nochmaliges erstellen weil einstellungen falsch
+
+ SOA_k_s/.classpath                                 | 17 +++++
+ SOA_k_s/.gitignore                                 |  1 +
+ SOA_k_s/.project                                   | 36 +++++++++++
+ SOA_k_s/.settings/.jsdtscope                       | 12 ++++
+ SOA_k_s/.settings/org.eclipse.jdt.core.prefs       |  7 ++
+ SOA_k_s/.settings/org.eclipse.wst.common.component |  8 +++
+ .../org.eclipse.wst.common.project.facet.core.xml  | 10 +++
+ .../org.eclipse.wst.jsdt.ui.superType.container    |  1 +
+ .../org.eclipse.wst.jsdt.ui.superType.name         |  1 +
+ SOA_k_s/WebContent/META-INF/MANIFEST.MF            |  3 +
+ SOA_k_s/WebContent/WEB-INF/web.xml                 | 12 ++++
+ SOA_k_s/src/src/client/Client.java                 | 58 +++++++++++++++++
+ SOA_k_s/src/src/iKnow/Knowledge.java               | 74 ++++++++++++++++++++++
+ 13 files changed, 240 insertions(+)
+
+commit bb6ebeba37ab024651d910de3a070a617d386eb4
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 11:21:34 2013 +0100
+
+    erstellen eines webprojects
+
+ .classpath                                         |  17 +++++
+ .gitignore                                         |   1 +
+ .project                                           |  36 ++++++++++
+ .settings/.jsdtscope                               |  12 ++++
+ .settings/org.eclipse.jdt.core.prefs               |   7 ++
+ .settings/org.eclipse.wst.common.component         |   8 +++
+ .../org.eclipse.wst.common.project.facet.core.xml  |  10 +++
+ .../org.eclipse.wst.jsdt.ui.superType.container    |   1 +
+ .settings/org.eclipse.wst.jsdt.ui.superType.name   |   1 +
+ SOA/.classpath                                     |   6 --
+ SOA/.project                                       |  17 -----
+ SOA/.settings/org.eclipse.jdt.core.prefs           |  11 ---
+ SOA/bin/client/Client.class                        | Bin 2016 -> 0 bytes
+ SOA/bin/iKnow/Knowledge.class                      | Bin 3190 -> 0 bytes
+ SOA/conf.properties                                |   3 -
+ SOA/src/client/Client.java                         |  58 ----------------
+ SOA/src/iKnow/Knowledge.java                       |  74 ---------------------
+ WebContent/META-INF/MANIFEST.MF                    |   3 +
+ src/client/Client.java                             |  58 ++++++++++++++++
+ src/iKnow/Knowledge.java                           |  74 +++++++++++++++++++++
+ 20 files changed, 228 insertions(+), 169 deletions(-)
+
+commit 5cbd399cd8ad567b40e163dd8d8f5a2b2f862105
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Thu Nov 7 10:47:55 2013 +0100
+
+    loeschen der unnoetigen imports
+
+ SOA/bin/client/Client.class   | Bin 2018 -> 2016 bytes
+ SOA/bin/iKnow/Knowledge.class | Bin 3190 -> 3190 bytes
+ SOA/conf.properties           |   3 ++-
+ SOA/src/client/Client.java    |   2 --
+ SOA/src/iKnow/Knowledge.java  |   4 ----
+ 5 files changed, 2 insertions(+), 7 deletions(-)
+
+commit 59329af6f8436936e23ba01c92f23d36befb3603
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Sun Nov 3 21:17:36 2013 +0100
+
+    KnowledgeDatenbankfertig
+    
+    KnowledgeDatenbank mit persistenten speichern und laden mit Properties
+    fertig.
+
+ SOA/bin/client/Client.class        | Bin 2337 -> 2018 bytes
+ SOA/bin/client/XMLAdapter.class    | Bin 1452 -> 0 bytes
+ SOA/bin/client/XMLController.class | Bin 278 -> 0 bytes
+ SOA/bin/client/XMLElemente.class   | Bin 772 -> 0 bytes
+ SOA/bin/iKnow/Knowledge.class      | Bin 1508 -> 3190 bytes
+ SOA/conf.properties                |   2 ++
+ SOA/src/client/Client.java         |   8 ++---
+ SOA/src/client/XMLAdapter.java     |  31 ------------------
+ SOA/src/client/XMLController.java  |   5 ---
+ SOA/src/client/XMLElemente.java    |  24 --------------
+ SOA/src/iKnow/Knowledge.java       |  64 +++++++++++++++++++++++++++++++------
+ 11 files changed, 59 insertions(+), 75 deletions(-)
+
+commit 1c0acaa8543df26b368f2406acc805caf97966f4
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Sat Oct 26 19:36:38 2013 +0200
+
+    Client erweitert
+    
+    Funktionen suchen und ertellen des Clients erweitert und verbessert.
+    (Exception Handling)
+
+ SOA/bin/client/XMLAdapter.class    | Bin 0 -> 1452 bytes
+ SOA/bin/client/XMLController.class | Bin 0 -> 278 bytes
+ SOA/bin/client/XMLElemente.class   | Bin 0 -> 772 bytes
+ SOA/src/client/XMLAdapter.java     |  31 +++++++++++++++++++++++++++++++
+ SOA/src/client/XMLController.java  |   5 +++++
+ SOA/src/client/XMLElemente.java    |  24 ++++++++++++++++++++++++
+ 6 files changed, 60 insertions(+)
+
+commit da39d627b649832e8fc189940da01bcdbdbaa46f
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Sat Oct 26 15:42:55 2013 +0200
+
+    XMLspeichern
+    
+    Halbfertige Implementierung zum persistenten speichern der
+    Wissensdatenbank mit XML
+
+ SOA/bin/client/Client.class   | Bin 480 -> 2337 bytes
+ SOA/bin/iKnow/Knowledge.class | Bin 1493 -> 1508 bytes
+ SOA/src/client/Client.java    |  31 ++++++++++++++++++++++++++++---
+ SOA/src/iKnow/Knowledge.java  |   8 +++-----
+ 4 files changed, 31 insertions(+), 8 deletions(-)
+
+commit ef1858c79180b1b49f4536624239982e762e4ace
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Fri Oct 25 14:06:07 2013 +0200
+
+    Client
+    
+    Client teilweise implementiert mit suchen und eintrag erstellen.
+
+ SOA/bin/client/Client.class | Bin 0 -> 480 bytes
+ SOA/src/client/Client.java  |  39 +++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 39 insertions(+)
+
+commit 3d32ce3de1951ce8262c20ed1bd449760ab7028c
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Fri Oct 25 13:34:57 2013 +0200
+
+    Knowledge
+    
+    Knoledge Datenbank fertig.
+
+ SOA/bin/iKnow/Datenbank.class | Bin 264 -> 0 bytes
+ SOA/bin/iKnow/Knowledge.class | Bin 0 -> 1493 bytes
+ SOA/src/iKnow/Datenbank.java  |   5 -----
+ SOA/src/iKnow/Knowledge.java  |  34 ++++++++++++++++++++++++++++++++++
+ 4 files changed, 34 insertions(+), 5 deletions(-)
+
+commit bfde77512c7f7db6151ab0795d7cf21b33b97be4
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Fri Oct 25 11:47:36 2013 +0200
+
+    datenbankangelegt
+
+ SOA/bin/iKnow/Datenbank.class | Bin 0 -> 264 bytes
+ SOA/src/iKnow/Datenbank.java  |   5 +++++
+ 2 files changed, 5 insertions(+)
+
+commit 6c3300061b219437fd9e608b8cc9d602f9ef9b00
+Author: aklune <aklune@student.tgm.ac.at>
+Date:   Fri Oct 25 11:39:34 2013 +0200
+
+    Protokoll
+
+ Aufgabe02_SOA_Klune_Schuschnig.docx | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6c3de39cb8c750881ad86c37b4023689f96e0196
+Author: tobischuschnig <tschuschnig@student.tgm.ac.at>
+Date:   Fri Oct 25 11:29:01 2013 +0200
+
+    init
+
+ SOA/.classpath                           |  6 ++++++
+ SOA/.project                             | 17 +++++++++++++++++
+ SOA/.settings/org.eclipse.jdt.core.prefs | 11 +++++++++++
+ 3 files changed, 34 insertions(+)
