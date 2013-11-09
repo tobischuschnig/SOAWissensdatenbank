@@ -9,6 +9,11 @@ import org.apache.axis2.AxisFault;
 import iknowsoa.KnowledgeServiceStub;
 import iknowsoa.KnowledgeServiceStub.*; 
 
+/**
+ * Der Client zur Wissensdatenbank realisiert mittels eines JMessageDialog
+ * @author Schuschnig Klune
+ * @version 2013-11-02
+ */
 public class Client {
 
 	/**
